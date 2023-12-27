@@ -1,5 +1,5 @@
 // import React from "react"
-import React from "https://esm.sh/react"
+import React from "react"
 // import confetti from "https://esm.sh/canvas-confetti@1.6.0"
 // import ReactDom from "https://esm.sh/react-dom@18.2.0"
 // import './code.css';
