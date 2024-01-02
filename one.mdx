@@ -1,0 +1,72 @@
+---
+  urlTitle: Getting started
+  title: This is the first doc
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+---
+
+import Seven from "./Seven.jsx";
+
+# ONE
+
+## Second heading
+
+<Seven />
+
+    <>
+      <h1>Rendering Text from JSON111</h1>
+      <div>
+        <span>Background</span> 
+        <button 
+        type="button" 
+        onClick={ () => {
+    props.addToGlobalState("bg", "limegreen")
+  }}
+        >
+        Limegreen
+        </button>
+        <button 
+        type="button" 
+        onClick={ () =>{
+    props.addToGlobalState("bg", "pink")
+  }}
+        >
+        Pink
+        </button>
+      </div>
+      <div>
+        <span>Font</span> 
+        <button 
+        type="button" 
+        onClick={ () => {
+    props.addToGlobalState("color", "white")
+  }}
+        >
+        White
+        </button>
+        <button 
+        type="button" 
+        onClick={ () =>{
+    props.addToGlobalState("color", "purple")
+  }}
+        >
+        purple
+        </button>
+      </div>
+      <div style={{display: "flex"}}>
+        {props.manifest.tree.children.filter(el => el.nodeType === "file" && el.ext === ".mdx" && el.frontmatter.title)
+        .map((element, index) => (
+          <div key={index} style={{
+            border: '1px solid #ddd',
+            borderRadius: '8px',
+            padding: '16px',
+            margin: '16px',
+            maxWidth: '300px',  
+            background: `${props.globalState.bg || "pink"}`,
+            color: `${props.globalState.color || "black"}`,
+          }}>
+            <h2>{element.frontmatter?.title}</h2>
+            <p>{element.frontmatter?.description}</p>
+          </div>
+        ))}
+      </div>
+    </>
