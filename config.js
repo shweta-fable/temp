@@ -21,7 +21,30 @@ module.exports = {
       showSidePanel: true
     },
     content: {},
-    footer: {},
+    footer: {
+      logo: 'https://sharefable.com/fable_footer-logo.svg',
+      copyright: 'Fable © 2024',
+      links: [
+        {
+          heading: 'Solutions',
+          links: [
+            { title: 'Marketing', url: 'https://sharefable.com/solutions/marketing' },
+            { title: 'Sales', url: 'https://sharefable.com/solutions/sales' },
+            { title: 'Presales', url: 'https://sharefable.com/solutions/presales' },
+            { title: 'Partnerships', url: 'https://sharefable.com/solutions/partnerships' },
+          ]
+        },
+        {
+          heading: 'Resources',
+          links: [
+            { title: 'Fable Champs', url: 'https://sharefable.com/growth-stories' },
+            { title: 'Fable Untold', url: 'https://sharefable.com/podcast/mastering-b2b-demand-generation' },
+            { title: 'E-books', url: 'https://sharefable.com/ebooks' },
+            { title: 'Privacy Policy', url: 'https://sharefable.com/privacy-policy' },
+          ]
+        },
+      ],
+    }
   },
   theme: {
     colors: {
