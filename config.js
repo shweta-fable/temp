@@ -1,3 +1,4 @@
+import Header from "./.component/header/Header.jsx"
 module.exports = {
   version: "1.0.0",
   urlMapping: {
@@ -6,6 +7,7 @@ module.exports = {
   },
   props: {
     header: {
+      customComponent: Header,      
       logo: {
         imageUrl: 'https://sharefable.com/fable-logo.svg',
         title: 'Fable Docs',
@@ -15,7 +17,18 @@ module.exports = {
         links: [
           { title: 'Visit Fable', url: 'https://sharefable.com' }
         ]
-      }
+      },
+      cta: {
+        title: 'Hello world',
+        link: '#somewhere'
+      },
+      ctas: [
+        {
+          type: 'secondary',
+          title: 'Join the waitlist',
+          url: 'https://www.theden.ai/join-the-waitlist',
+        },
+      ]
     },
     sidepanel: {
       showSidePanel: true
